@@ -19,7 +19,7 @@ spec:
         image: flask-app:latest
         imagePullPolicy: IfNotPresent
         ports:
-          - containerPort: 5000
+          - containerPort: 5005
         envFrom:
           - secretRef:
               name: llmops-secrets
@@ -35,4 +35,4 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 5000
+      targetPort: 5005
